@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = "1.1.2-2"
+    ext.kotlin_version = "1.1.2-3"
     repositories {
         mavenCentral()
     }
@@ -17,7 +17,7 @@ apply plugin: 'com.github.kt3k.coveralls'
 android {
     buildToolsVersion '25.0.2'
     defaultConfig {
-        compileSdkVersion "Google Inc.:Google APIs:24"
+        compileSdkVersion 25
         applicationId "org.blitzortung.android.app"
         minSdkVersion 9
         targetSdkVersion 25
@@ -47,6 +47,7 @@ android {
 def anko_version = '0.9.1'
 
 dependencies {
+    compile 'org.osmdroid:osmdroid-android:5.6.3'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile "org.jetbrains.anko:anko-sdk23:$anko_version" // sdk19, sdk21, sdk23 are also available
